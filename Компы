@@ -1,6 +1,4 @@
-# Обновляем HTML с плавными анимациями, заменой валюты на тенге и скрытием контактов
-
-html_final = html_enhanced.replace("₽", "₸") \
+ html_final = html_enhanced.replace("₽", "₸") \
     .replace("+7 (999) 123-45-67", "+77052567130") \
     .replace("Email: info@gamepc.ru", "Email: [скрыт по запросу]") \
     .replace("Адрес: Москва, ул. Игровая, д.1", "Адрес: [скрыт по запросу]") \
