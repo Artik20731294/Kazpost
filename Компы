@@ -1,0 +1,35 @@
+# Обновляем HTML с плавными анимациями, заменой валюты на тенге и скрытием контактов
+
+html_final = html_enhanced.replace("₽", "₸") \
+    .replace("+7 (999) 123-45-67", "+77052567130") \
+    .replace("Email: info@gamepc.ru", "Email: [скрыт по запросу]") \
+    .replace("Адрес: Москва, ул. Игровая, д.1", "Адрес: [скрыт по запросу]") \
+    .replace("</head>", """
+    <style>
+        /* Улучшенные плавные анимации */
+        * {
+            transition: all 0.4s ease-in-out;
+        }
+        .product:hover {
+            transform: scale(1.04);
+            box-shadow: 0 0 30px #00ffcc66;
+        }
+        .buy-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #00ffccaa;
+        }
+        header h1 {
+            transition: text-shadow 0.4s ease-in-out;
+        }
+        header h1:hover {
+            text-shadow: 3px 3px 10px #00ffcc;
+        }
+    </style>
+</head>""")
+
+# Сохраняем окончательную версию
+file_path = "/mnt/data/index.html"
+with open(file_path, "w", encoding="utf-8") as file:
+    file.write(html_final)
+
+file_path
